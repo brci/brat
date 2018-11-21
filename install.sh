@@ -24,24 +24,24 @@ data_dir_abs="$base_dir/$DATA_DIR"
 USAGE="Usage: ${SCRIPT_NAME} [-u] [-q]"
 
 # Options
-UNPRIVILEGED=false
-QUICK=false
+UNPRIVILEGED=true
+QUICK=true
 
-while getopts uq OPT; do
-    case "${OPT}" in
-        u)
-            UNPRIVILEGED=true
-            ;;
-	q)
-            QUICK=true
-            UNPRIVILEGED=true
-	    ;;
-        \?)
-            echo ${USAGE} 1>&2
-            exit 1
-            ;;
-    esac
-done
+#while getopts uq OPT; do
+#    case "${OPT}" in
+#        u)
+#            UNPRIVILEGED=true
+#            ;;
+#	q)
+#            QUICK=true
+#            UNPRIVILEGED=true
+#	    ;;
+#        \?)
+#            echo ${USAGE} 1>&2
+#            exit 1
+#            ;;
+#    esac
+#done
 shift `expr $OPTIND - 1`
 
 if [ "$QUICK" = true ]; then
