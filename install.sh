@@ -46,8 +46,7 @@ shift `expr $OPTIND - 1`
 
 if [ "$QUICK" = true ]; then
     user_name='default'
-    #password=`python -c 'import string; import random; print "".join(random.choice(string.ascii_letters+string.digits) for _ in range(10))'`
-    password = 'password'
+    password='123456'
     echo "Quick install: set user name to \"$user_name\" and password to \"$password\""
     admin_email='unconfigured@example.com'
 else
