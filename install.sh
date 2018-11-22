@@ -13,10 +13,23 @@ DATA_DIR=data
 CONFIG_TEMPLATE=config_template.py
 CONFIG=config.py
 
+
+for filename in $(ls)
+do
+  last_update=$(stat -c "%n %y" $filename) ;
+  echo "${last_update%.*}" ;
+done;
+
+echo "================================================="
+
+
 # Absolute data and work paths
 
 base_dir=`(cd \`dirname $0\`; pwd)`
 SCRIPT_NAME=`basename $0`
+
+
+
 
 work_dir_abs="$base_dir/$WORK_DIR"
 data_dir_abs="$base_dir/$DATA_DIR"
