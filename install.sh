@@ -21,6 +21,22 @@ SCRIPT_NAME=`basename $0`
 work_dir_abs="$base_dir/$WORK_DIR"
 data_dir_abs="$base_dir/$DATA_DIR"
 
+echo "Work DIR name:    \"$work_dir_abs/\""
+echo "Data DIR name:    \"$data_dir_abs/\""
+
+if [ -d $work_dir_abs ] && true; then
+    echo "work directory \"$work_dir_abs/\" exist";
+else
+     echo "work directory \"$work_dir_abs/\" does not exist";
+fi
+if [ -d $data_dir_abs ] && true; then
+    echo "data directory \"$data_dir_abs/\" exist";
+else
+     echo "data directory \"$data_dir_abs/\" does not exist";
+fi
+
+
+
 USAGE="Usage: ${SCRIPT_NAME} [-u] [-q]"
 
 # Options
