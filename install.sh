@@ -148,6 +148,7 @@ python3 -m pip install filelock
 
 python standalone.py
 
+'''
 if [ "$QUICK" = true ]; then
     cat << EOF
 Quick install: finished. To test brat, run the standalone server as
@@ -175,7 +176,7 @@ You can automatically diagnose some common installation issues using:
 If there are issues not detected by the above script, please contact the
 brat developers and/or file a bug to the brat bug tracker:
 
-    https://github.com/nlplab/brat/issues'
+    https://github.com/nlplab/brat/issues
 
 3.) Once brat is running, put your data in the data directory. Or use
     the example data placed there by the installation:
@@ -190,3 +191,6 @@ brat developers and/or file a bug to the brat bug tracker:
 5.) Then, you (and your team?) are ready to start annotating!
 EOF
 fi
+'''
+
+
