@@ -144,6 +144,8 @@ fi
 
 # Dump some last instructions to the user
 
+python3 -m pip install filelock
+
 python standalone.py
 
 if [ "$QUICK" = true ]; then
