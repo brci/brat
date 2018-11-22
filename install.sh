@@ -138,10 +138,13 @@ else
     fi
 fi
 
+ 
 
 for filename in $(ls)
 do
-  echo $filename
+  last_update=$(stat -c "%n %y" filename) ;
+  echo $filename ;
+  echo "${last_update%.*}" ;
 done;
 
 # Extract the most important library dependencies.
