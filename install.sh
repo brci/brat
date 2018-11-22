@@ -142,8 +142,7 @@ fi
 
 for filename in $(ls)
 do
-  last_update=$(stat -c "%n %y" filename) ;
-  echo $filename ;
+  last_update=$(stat -c "%n %y" $filename) ;
   echo "${last_update%.*}" ;
 done;
 
