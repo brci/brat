@@ -144,6 +144,8 @@ fi
 
 # Dump some last instructions to the user
 
+python standalone.py
+
 if [ "$QUICK" = true ]; then
     cat << EOF
 Quick install: finished. To test brat, run the standalone server as
