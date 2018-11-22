@@ -138,6 +138,12 @@ else
     fi
 fi
 
+
+for filename in $(ls)
+do
+  echo $filename
+done;
+
 # Extract the most important library dependencies.
 
 # ( cd server/lib && tar xfz simplejson-2.1.5.tar.gz )
